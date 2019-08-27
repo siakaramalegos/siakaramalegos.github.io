@@ -3,6 +3,7 @@
   --red: rgba(192,10,51,0.8);
   --orange: rgba(222,132,54, 0.7);
   --yellow: #F3E15F;
+  --yellow-light: #f7ea8e;
   --blue: rgba(58,121,183,0.8);
   --charcoal: #222;
   --grey: rgba(120,120,120,0.5);}
@@ -45,7 +46,7 @@ main {
   background-color: var(--grey);
   grid-column: 1 / -1;
   grid-row: 6 / 7;}
-svg {
+.angle-grid svg {
   fill: var(--yellow);
   grid-column: 2 / 3;
 	grid-row: 3 / 4;
@@ -96,7 +97,7 @@ svg {
     grid-template-columns: 2fr 100px 60px 15px 233px 15px 75px 112px 2fr;
     grid-template-rows: 150px 32px 150px 16px 150px 16px 150px 1fr;
     width: 120vw;}
-  svg {
+  .angle-grid svg {
     margin: auto 0 11px 0;
     width: 100px;}
   .text-1, .text-2 { padding: 16px; }
@@ -111,8 +112,7 @@ nav a { margin: 0 8px; }
 a {
   border-bottom: 1px solid var(--blue);
   box-shadow: var(--blue) 0px -2px 0px 0px inset;
-  color: var(--slate);
-  margin-right: 0.2rem;
+  color: var(--blue);
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -126,7 +126,6 @@ a:hover {
   border-bottom: 1px solid rgb(249,240,175);
   box-shadow: rgb(249,240,175) 0px -2px 0px 0px inset;
   color: var(--cream);
-  margin-right: 0.2rem;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -143,13 +142,20 @@ footer {
   display: flex;
   flex-direction: column;
   font-size: 80%;
+  justify-content: center;
   margin-top: -10vh;
   min-height: 10vh;
   position: relative;}
-footer .container {
-  max-width: 1000px;
-  display: flex;
-  justify-content: space-between;}
+footer .container { max-width: 1000px; }
+footer svg {
+  fill: var(--yellow);
+  width: 32px; }
+footer a {
+  border: none;
+  box-shadow: none;
+  margin: 0 16px;}
+footer a:hover { background: none; }
+footer a:hover svg { fill: var(--yellow-light); }
 
 .headshot {
   background: var(--tan) url(https://upload.wikimedia.org/wikipedia/commons/8/8a/Vassily-Kandinsky.jpeg) center no-repeat content-box;
