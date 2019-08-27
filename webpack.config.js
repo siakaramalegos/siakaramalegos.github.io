@@ -61,6 +61,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/about.html',
+      filename: 'about/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/speaking.html',
+      filename: 'speaking/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/built.html',
+      filename: 'built/index.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
     }),
